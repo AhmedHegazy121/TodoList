@@ -1,5 +1,4 @@
-# 📋 [تطبيق إدارتي للمهام | My Tasks App](https://6a10c0c9cbfde1caced837f0--todo-list2233.netlify.app/)
-
+# 📋 [Todo List Project](https://netlify.app)
 A professional, high-performance Todo application built with React and styled beautifully using Material UI (MUI v5). This project showcases clean software architecture by separating layout concerns, custom hooks, global context, and pure state reducers. It is fully optimized for Right-to-Left (RTL) Arabic typography.
 
 ⚡ **[اضغط هنا لمعاينة المشروع مباشرة على Netlify / Live Demo](https://6a10c0c9cbfde1caced837f0--todo-list2233.netlify.app/)**
@@ -47,30 +46,7 @@ src/
 
 ---
 
-## 🚀 Getting Started
 
-Follow these short steps to install, compile, and execute the web layout locally on your development desktop machine:
-
-### 1. Clone the repository
-```bash
-git clone https://github.com
-cd YOUR_REPOSITORY_NAME
-```
-
-### 2. Install dependencies
-```bash
-npm install
-```
-
-### 3. Launch the development server
-```bash
-npm start
-```
-*Open [http://localhost:3000](http://localhost:3000) inside your web browser engine window to view the working dashboard layout.*
-
----
-
-## 🎨 Central Palette Configuration
 
 This application relies on a single source of truth for color styling inside `App.js`. You can swap themes universally by adjusting the `palette` hex strings within the centralized custom theme engine builder:
 
