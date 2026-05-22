@@ -1,0 +1,200 @@
+/* ==========================================
+   1. GLOBAL LAYOUTS & UTILITIES
+   ========================================== */
+.App {
+  text-align: center;
+}
+
+/* Framework Helper Classes */
+.c-white {
+  color: #ffffff;
+}
+
+.c-gray {
+  color: #616161;
+}
+
+.bg-white {
+  background: #ffffff;
+}
+
+/* ==========================================
+   2. CUSTOM FONTS CONFIGURATION
+   ========================================== */
+@font-face {
+  font-family: Alexandria;
+  src: url(../public/Fonts/Alexandria-Black.ttf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: Alexandria;
+  src: url(../public/Fonts/Alexandria-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Alexandria;
+  src: url(../public/Fonts/Alexandria-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: Alexandria;
+  src: url(../public/Fonts/Alexandria-Light.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: Alexandria;
+  src: url(../public/Fonts/Alexandria-Thin.ttf);
+  font-weight: 100;
+}
+
+/* ==========================================
+   3. TODO CARD EFFECTS & ANIMATIONS
+   ========================================== */
+.todoCard {
+  position: relative !important;
+  transition: all 0.3s ease-in-out !important;
+  border-right: 0px solid white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Subtle RTL slide nudge on hover with theme-matching drop shadow */
+.todoCard:hover {
+  transform: translateX(-8px);
+  box-shadow: 0 8px 16px rgba(0, 105, 92, 0.15) !important;
+}
+
+/* Grow icon buttons slightly when hovering over the card parent */
+.todoCard:hover .MuiIconButton-root {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   4. INTERACTIVE ACTION BUTTON HOVERS
+   ========================================== */
+/* Base Button Styles */
+.checked,
+.edite,
+.delete {
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1;
+  transition:
+    color 0.4s ease,
+    border-color 0.4s ease,
+    background-color 0.4s ease !important;
+}
+
+/* Slide Hover Animation Base Hidden Underlay */
+.checked::before,
+.edite::before,
+.delete::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+/* Hover Triggers to slide open the background */
+.checked:hover::before,
+.edite:hover::before,
+.delete:hover::before {
+  transform: scaleX(1);
+}
+
+/* Fills Left-to-Right for Check button to feel like a completion swipe */
+.checked:hover::before {
+  transform-origin: left;
+}
+
+/* Button Specific Background Slide-In Colors (Premium Shades) */
+.checked::before {
+  background-color: #00695c; /* Deep Teal matching app theme */
+}
+.edite::before {
+  background-color: #0288d1; /* Clean info blue */
+}
+.delete::before {
+  background-color: #d32f2f; /* Premium warning red */
+}
+
+/* Uniform contrast color shift on button hover */
+.checked:hover,
+.edite:hover,
+.delete:hover {
+  color: #ffffff !important;
+}
+
+/* Synchronize corresponding outer border rings during hover states */
+.checked:hover {
+  border-color: #004d40 !important;
+}
+.edite:hover {
+  border-color: #01579b !important;
+}
+.delete:hover {
+  border-color: #b71c1c !important;
+}
+
+/* ==========================================
+   5. BUTTON CLICKED / ACTIVE STATES
+   ========================================== */
+/* Completed Toggled State (Deep Green When Clicked/Saved) */
+.checked.is-completed {
+  background-color: #004d40 !important;
+  color: #ffffff !important;
+  border-color: #00695c !important;
+}
+
+/* Disables hover slide animation layer once checked state is active */
+.checked.is-completed::before {
+  transform: scaleX(0) !important;
+}
+
+.checked:focus,
+.checked:active {
+  background-color: #004d40 !important;
+  color: #ffffff !important;
+  border-color: #004d40 !important;
+  outline: none !important;
+}
+
+/* ==========================================
+   6. INPUT FIELDS & CREATION PANEL BUTTON
+   ========================================== */
+.add-title {
+  background-color: #fdfdfde1 !important;
+  border-radius: 4px !important;
+}
+
+.add-title .MuiOutlinedInput-root fieldset {
+  border-color: #e0e0e0 !important;
+}
+
+/* Focus color adjusted to match your cohesive theme */
+.add-title .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #00695c !important;
+}
+
+.add-title .MuiInputLabel-root.Mui-focused {
+  color: #00695c !important;
+}
+
+.add-button {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 56px !important;
+  background-color: #004d40 !important; /* Premium dark teal contrast */
+  color: #ffffff !important;
+  font-weight: bold !important;
+  transition: background-color 0.2s ease-in-out !important;
+}
+
+.add-button:hover {
+  background-color: #00332a !important; /* Slightly darker shade on hover */
+}
