@@ -1,0 +1,58 @@
+# Loan Request Application
+
+A streamlined React-based web application designed to collect and validate user information for loan processing. This project focuses on high-quality user experience through real-time input filtering and a responsive feedback system.
+
+## 🚀 Features
+
+- **Strict Input Validation**: 
+  - **Age**: Accepts numbers only.
+  - **Phone Number**: Accepts only digits, `+`, and `-` symbols.
+- **Dynamic Form Handling**: The submit button is automatically disabled until all required fields are filled.
+- **Real-time Feedback**: A modal system that provides instant success or error messages based on business logic.
+- **Responsive Layout**: Built with Flexbox for a clean, centered interface.
+
+## 📋 Technical Overview
+
+### Input Constraints & Validation
+
+| Field | Requirement | Validation Logic |
+| :--- | :--- | :--- |
+| **Name** | Required | Non-empty string |
+| **Phone Number** | Required | Length 10-12 characters; allows `0-9`, `+`, `-` |
+| **Age** | Required | Must be a number between 18 and 100 |
+| **Employee Status** | Optional | Boolean (Checkbox) |
+| **Salary Range** | Required | Selection from predefined ranges |
+
+### Core Logic
+The application uses React's `useState` to manage a single object-based state (`loanInputs`). Regular expressions are used within `onChange` events to sanitize data before it is stored in the state.
+
+## 🛠️ Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Required Files:**
+   Ensure the following file structure is maintained:
+   - `LoanForm.js`: Main logic and form structure.
+   - `Modal.js`: Presentational component for feedback.
+   - `FormStyles.css`: Layout and design specifications.
+
+4. **Start the application:**
+   ```bash
+   npm start
+   ```
+
+## 🧩 Component Architecture
+
+- **LoanForm Component**: Manages the form lifecycle, data sanitization, and error handling logic.
+- **Modal Component**: A reusable UI element that displays a success message or a specific error message (`errorMassage`) based on the validation results.
+
+## 📄 License
+This project is open-source and available for educational purposes.
