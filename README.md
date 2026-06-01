@@ -1,7 +1,9 @@
-# 📋 [Todo List Project](https://6a10c0c9cbfde1caced837f0--todo-list2233.netlify.app/)
+# 📋 [Todo List Project](https://todo-list-ljpl.vercel.app/)
 A professional, high-performance Todo application built with React and styled beautifully using Material UI (MUI v5). This project showcases clean software architecture by separating layout concerns, custom hooks, global context, and pure state reducers. It is fully optimized for Right-to-Left (RTL) Arabic typography.
 
-⚡ **[اضغط هنا لمعاينة المشروع مباشرة على Netlify / Live Demo](https://6a10c0c9cbfde1caced837f0--todo-list2233.netlify.app/)**
+# ⚡ **[اضغط هنا لمعاينة المشروع مباشرة على Vercel / Live Demo](https://vercel.app)**
+https://vercel.app
+
 
 ---
 
