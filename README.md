@@ -7,16 +7,6 @@ A professional, high-performance Todo application built with React and styled be
 
 ---
 
-## ✨ Features
-
-* **Complete CRUD Engine**: Seamlessly add, view, update, and delete tasks.
-* **Global Architecture**: Powered by React Context and `useReducer` to prevent deep property prop-drilling.
-* **Visual Transitions**: Custom interactive button fill effects and card layout shifts engineered directly in raw CSS.
-* **Arabic Optimization**: Fully tailored with custom `Alexandria` typography and native RTL responsive alignments.
-* **Global Notifications**: Dynamic custom SnackBar alert messaging powered by an isolated toast communication context loop.
-
----
-<!-- معرض صور المشروع - قائمة منسدلة تفاعلية -->
 <div align="center" style="margin: 25px 0; max-width: 800px; margin-left: auto; margin-right: auto;">
 
   <!-- Image 1 (Open by default) -->
@@ -44,6 +34,17 @@ A professional, high-performance Todo application built with React and styled be
   </details>
 
 </div>
+## ✨ Features
+
+* **Complete CRUD Engine**: Seamlessly add, view, update, and delete tasks.
+* **Global Architecture**: Powered by React Context and `useReducer` to prevent deep property prop-drilling.
+* **Visual Transitions**: Custom interactive button fill effects and card layout shifts engineered directly in raw CSS.
+* **Arabic Optimization**: Fully tailored with custom `Alexandria` typography and native RTL responsive alignments.
+* **Global Notifications**: Dynamic custom SnackBar alert messaging powered by an isolated toast communication context loop.
+
+---
+<!-- معرض صور المشروع - قائمة منسدلة تفاعلية -->
+
 
 
 
