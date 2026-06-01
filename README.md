@@ -29,7 +29,7 @@ A professional, high-performance Todo application built with React and styled be
   <details style="margin-bottom: 15px; background: rgba(0, 105, 92, 0.05); padding: 12px; border-radius: 12px; border: 1px solid rgba(0, 105, 92, 0.15); text-align: right; direction: rtl;">
     <summary style="font-weight: bold; font-size: 16px; color: #00695c; cursor: pointer; user-select: none;">📸 الواجهة باللغة العربية (اضغط للعرض)</summary>
     <div align="center">
-      <img src="todoList2.png alt="الواجهة العربية" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); margin-top: 15px; border: 1px solid rgba(255, 255, 255, 0.1);" />
+      <img src="todoList2.png" alt="الواجهة العربية" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); margin-top: 15px; border: 1px solid rgba(255, 255, 255, 0.1);" />
     </div>
   </details>
 
@@ -37,7 +37,7 @@ A professional, high-performance Todo application built with React and styled be
   <details style="margin-bottom: 15px; background: rgba(0, 105, 92, 0.05); padding: 12px; border-radius: 12px; border: 1px solid rgba(0, 105, 92, 0.15); text-align: right; direction: rtl;">
     <summary style="font-weight: bold; font-size: 16px; color: #00695c; cursor: pointer; user-select: none;">📸 واجهة الهواتف المحمولة / Responsive (اضغط للعرض)</summary>
     <div align="center">
-      <img src="todoList3.png alt="واجهة الموبايل" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); margin-top: 15px; border: 1px solid rgba(255, 255, 255, 0.1);" />
+      <img src="todoList3.png"alt="واجهة الموبايل" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); margin-top: 15px; border: 1px solid rgba(255, 255, 255, 0.1);" />
     </div>
   </details>
 
