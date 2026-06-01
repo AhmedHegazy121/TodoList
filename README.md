@@ -14,6 +14,34 @@ A professional, high-performance Todo application built with React and styled be
 * **Global Notifications**: Dynamic custom SnackBar alert messaging powered by an isolated toast communication context loop.
 
 ---
+<!-- معرض صور المشروع - قائمة منسدلة تفاعلية -->
+<div align="center" style="margin: 25px 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+
+  <!-- الصورة الأولى (ستكون مفتوحة بشكل تلقائي بسبب كلمة open) -->
+  <details open style="margin-bottom: 15px; background: rgba(0, 105, 92, 0.05); padding: 12px; border-radius: 12px; border: 1px solid rgba(0, 105, 92, 0.15); text-align: right; direction: rtl;">
+    <summary style="font-weight: bold; font-size: 16px; color: #00695c; cursor: pointer; user-select: none;">📸 الشاشة الرئيسية للمشروع (اضغط للإغلاق)</summary>
+    <div align="center">
+      <img src="todoList.png" alt="الواجهة الرئيسية" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); margin-top: 15px; border: 1px solid rgba(255, 255, 255, 0.1);" />
+    </div>
+  </details>
+
+  <!-- الصورة الثانية -->
+  <details style="margin-bottom: 15px; background: rgba(0, 105, 92, 0.05); padding: 12px; border-radius: 12px; border: 1px solid rgba(0, 105, 92, 0.15); text-align: right; direction: rtl;">
+    <summary style="font-weight: bold; font-size: 16px; color: #00695c; cursor: pointer; user-select: none;">📸 الواجهة باللغة العربية (اضغط للعرض)</summary>
+    <div align="center">
+      <img src="./images/pic2.png" alt="الواجهة العربية" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); margin-top: 15px; border: 1px solid rgba(255, 255, 255, 0.1);" />
+    </div>
+  </details>
+
+  <!-- الصورة الثانية -->
+  <details style="margin-bottom: 15px; background: rgba(0, 105, 92, 0.05); padding: 12px; border-radius: 12px; border: 1px solid rgba(0, 105, 92, 0.15); text-align: right; direction: rtl;">
+    <summary style="font-weight: bold; font-size: 16px; color: #00695c; cursor: pointer; user-select: none;">📸 واجهة الهواتف المحمولة / Responsive (اضغط للعرض)</summary>
+    <div align="center">
+      <img src="./images/pic3.png" alt="واجهة الموبايل" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); margin-top: 15px; border: 1px solid rgba(255, 255, 255, 0.1);" />
+    </div>
+  </details>
+
+</div>
 
 ## 🏗️ Project Architecture & Folder Tree
 
