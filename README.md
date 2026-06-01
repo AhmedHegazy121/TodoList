@@ -1,8 +1,6 @@
 # 📋 [Todo List Project](https://todo-list-ljpl.vercel.app/)
 A professional, high-performance Todo application built with React and styled beautifully using Material UI (MUI v5). This project showcases clean software architecture by separating layout concerns, custom hooks, global context, and pure state reducers. It is fully optimized for Right-to-Left (RTL) Arabic typography.
-
-# ⚡ **[اضغط هنا لمعاينة المشروع مباشرة على Vercel / Live Demo](https://vercel.app)**
-
+⚡ **[اضغط هنا لمعاينة المشروع مباشرة على Vercel / Live Demo](https://vercel.app)**
 
 
 ---
