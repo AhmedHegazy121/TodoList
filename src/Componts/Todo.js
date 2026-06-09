@@ -1,7 +1,14 @@
 // ==========================================
 // 1. EXTERNAL IMPORTS (Material UI Core & Icons)
 // ==========================================
-import { Card, CardContent, Typography, Grid } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  Typography,
+  Grid,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
@@ -20,6 +27,15 @@ export default function Todo({ todo, showDelete, showEdite }) {
   // --- Context State Extraction ---
   const { todos, dispatch } = useTodes();
   const { showHideToast } = useToast();
+
+  // --- Responsive Setup Variables ---
+  const theme = useTheme();
+
+  // Checks for mobile screens (width under 600px)
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  // NEW: Detects tablet/medium viewports exactly between 600px and 850px width
+  const isTablet = useMediaQuery("(min-width:600px) and (max-width:850px)");
 
   // ==========================================
   // 4. COMPONENT EVENT HANDLERS
@@ -48,34 +64,56 @@ export default function Todo({ todo, showDelete, showEdite }) {
     <>
       <Card
         className="todoCard"
-        sx={{ minWidth: 275, background: "white", marginTop: 5 }}
+        sx={{ minWidth: 275, background: "white", marginTop: 2 }}
       >
-        <CardContent>
-          <Grid container spacing={2}>
+        <CardContent
+          sx={{
+            padding: isMobile ? "12px" : "16px",
+            "&:last-child": { pb: isMobile ? "12px" : "16px" },
+          }}
+        >
+          <Grid
+            container
+            spacing={isMobile ? 1 : 2}
+            sx={{ direction: "rtl", alignItems: "center" }}
+          >
             {/* --- Text Content Columns (Title & Details) --- */}
-            <Grid size={9}>
+            {/* Dynamically resizes column layout allocations so text gets more breathing room on tablet viewports */}
+            <Grid size={isMobile ? 7 : isTablet ? 8 : 9}>
               <Typography
                 className="c-gray"
                 variant="h5"
                 sx={{
                   textAlign: "right",
-                  textDecoration: todo.isCompeleted ? "line-through" : "none",
+                  textDecoration: todo.isCompleted ? "line-through" : "none",
+                  // Dynamically scales the font sizing structure down step-by-step
+                  fontSize: isMobile ? "15px" : isTablet ? "18px" : "1.5rem",
+                  fontWeight: "bold",
+                  wordBreak: "break-all",
                 }}
               >
                 {todo.title}
               </Typography>
-              <Typography
-                className="c-gray"
-                variant="h6"
-                sx={{ textAlign: "right" }}
-              >
-                {todo.description}
-              </Typography>
+              {todo.description && (
+                <Typography
+                  className="c-gray"
+                  variant="h6"
+                  sx={{
+                    textAlign: "right",
+                    fontSize: isMobile ? "12px" : isTablet ? "14px" : "1.25rem",
+                    opacity: 0.8,
+                    wordBreak: "break-all",
+                  }}
+                >
+                  {todo.description}
+                </Typography>
+              )}
             </Grid>
 
             {/* --- Action Interactive Icon Group --- */}
+            {/* Dynamically shifts space width layouts for buttons to comfortably balance on tablets */}
             <Grid
-              size={3}
+              size={isMobile ? 5 : isTablet ? 4 : 3}
               sx={{
                 display: "flex",
                 justifyContent: "space-around",
@@ -84,49 +122,67 @@ export default function Todo({ todo, showDelete, showEdite }) {
             >
               {/* Checklist Toggle Action Button */}
               <IconButton
-                onClick={() => {
-                  handleCheckClick();
-                }}
+                onClick={handleCheckClick}
                 aria-label="check-icon"
                 className="checked"
                 style={{
-                  color: todo.isCompleted ? "white" : "#004d40", // Uses Theme Dark Teal
-                  background: todo.isCompleted ? "#004d40" : "#e0f2f1", // Balanced Light Teal Backing
-                  border: "solid #00695c 3px", // Core Theme Primary Teal Border
+                  color: todo.isCompleted ? "white" : "#004d40",
+                  background: todo.isCompleted ? "#004d40" : "#e0f2f1",
+                  border: "solid #00695c 3px",
+                  // Handles intermediate sizes for icons and spacing rings smoothly
+                  padding: isMobile ? "4px" : isTablet ? "6px" : "8px",
+                  width: isMobile ? "32px" : isTablet ? "38px" : "44px",
+                  height: isMobile ? "32px" : isTablet ? "38px" : "44px",
                 }}
               >
-                <CheckIcon />
+                <CheckIcon
+                  sx={{
+                    fontSize: isMobile ? "16px" : isTablet ? "20px" : "24px",
+                  }}
+                />
               </IconButton>
 
-              {/* Edite Button */}
+              {/* Edit Button */}
               <IconButton
                 className="edite"
                 aria-label="edite"
                 style={{
-                  color: "#0288d1", // Clean, Professional Corporate Info Blue
-                  background: "#e1f5fe", // Soft Light Blue Background Accent
-                  border: "solid #29b6f6 3px", // Defined Mid-tone Info Border Accent
+                  color: "#0288d1",
+                  background: "#e1f5fe",
+                  border: "solid #29b6f6 3px",
+                  padding: isMobile ? "4px" : isTablet ? "6px" : "8px",
+                  width: isMobile ? "32px" : isTablet ? "38px" : "44px",
+                  height: isMobile ? "32px" : isTablet ? "38px" : "44px",
                 }}
                 onClick={handleEditeClick}
               >
-                <AutoFixHighIcon />
+                <AutoFixHighIcon
+                  sx={{
+                    fontSize: isMobile ? "16px" : isTablet ? "20px" : "24px",
+                  }}
+                />
               </IconButton>
-              {/* Edite Button */}
 
               {/* Delete Button */}
               <IconButton
                 className="delete"
                 aria-label="delete"
                 style={{
-                  color: "#d32f2f", // High-Contrast Danger/Error Red Accent
-                  background: "#ffebee", // Soft Light Warning Pink Background Accent
-                  border: "solid #ef5350 3px", // Crisp Coral Warning Border Accent
+                  color: "#d32f2f",
+                  background: "#ffebee",
+                  border: "solid #ef5350 3px",
+                  padding: isMobile ? "4px" : isTablet ? "6px" : "8px",
+                  width: isMobile ? "32px" : isTablet ? "38px" : "44px",
+                  height: isMobile ? "32px" : isTablet ? "38px" : "44px",
                 }}
                 onClick={handleDeleteClick}
               >
-                <DeleteIcon />
+                <DeleteIcon
+                  sx={{
+                    fontSize: isMobile ? "16px" : isTablet ? "20px" : "24px",
+                  }}
+                />
               </IconButton>
-              {/* Delete Button */}
             </Grid>
           </Grid>
         </CardContent>
